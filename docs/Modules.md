@@ -1,13 +1,13 @@
 # Modules Diagram
 
 ```mermaid
-graph TD;
-	Sensor 1>RTL-SDR USB;
-	Sensor 2>RTL-SDR USB;
-	Sensor n>RTL-SDR USB;
-	RTL-SDR USB>RTL_433;
-	RTL_433>RTL Data Collector;
-	RTL Data Collector>RRD DB;
-	RTL Data Collector>Picture;
-	Picture>WEB Server;
+graph TD
+        A1[Sensor 1] -- RF --> B[RTL-SDR USB];
+        A2[Sensor ...] -- RF --> B;
+        A3[Sensor n] -- RF --> B;
+        B --> C[RTL_433];
+        C --> D[RTL Data Collector];
+        D --> E[RRD DB];
+        D --> F[Picture];
+        F --> G[WEB Server];
 ```
